@@ -5,42 +5,48 @@ import React from 'react';
 import 'prismjs/themes/prism-okaidia.css';
 
 import config from 'content/meta/config';
+import menu from 'content/meta/menu';
 
-import Layout from 'base/Layout';
-import Page from 'base/Page';
-import List from 'base/List';
-import Seo from 'base/Seo';
+import {
+  // eslint-disable-next-line no-unused-vars
+  global,
+  Layout,
+  Page,
+  Seo,
+  layout,
+  page,
+} from 'gatsby-starter-kit-themes/dist/default';
 
-import themed from 'utils/themed';
+import { themed } from 'gatsby-starter-kit-themes/dist/';
 
-const PageThemed = themed({ theme: config.theme, style: 'page' })(Page);
+const LayoutThemed = themed({ themeStyle: layout })(Layout);
+const PageThemed = themed({ themeStyle: page })(Page);
 
 const PageTemplate = props => {
   const {
     data: {
       page,
       page: {
-        frontmatter: { title, categories },
+        frontmatter: { title },
         fields: { slug },
       },
-      pages: { edges: rawItems },
+      footerLinks: { html: footerLinksHTML },
+      copyrightNote: { html: copyrightNoteHTML },
     },
   } = props;
 
-  const items = rawItems.map(item => item.node);
-
-  const layoutStyle =
-    categories && categories.includes('docs') ? 'layoutSidebar' : 'layout';
-
-  const LayoutThemed = themed({
-    theme: config.theme,
-    style: layoutStyle,
-  })(Layout);
+  const { headerTitle, headerSubTitle } = config;
 
   return (
-    <LayoutThemed>
+    <LayoutThemed
+      footerLinks={footerLinksHTML}
+      copyrightNote={copyrightNoteHTML}
+      headerTitle={headerTitle}
+      headerSubTitle={headerSubTitle}
+      menu={menu}
+    >
       <PageThemed page={page} />
-      <Seo title={title} path={slug} />
+      <Seo config={config} />
     </LayoutThemed>
   );
 };
@@ -66,21 +72,15 @@ export const query = graphql`
         categories
       }
     }
-    pages: allMarkdownRemark(
-      filter: { frontmatter: { categories: { in: ["docs"] } } }
-      sort: { fields: [fields___prefix] }
+    footerLinks: markdownRemark(
+      fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
     ) {
-      edges {
-        node {
-          fields {
-            slug
-            prefix
-          }
-          frontmatter {
-            title
-          }
-        }
-      }
+      html
+    }
+    copyrightNote: markdownRemark(
+      fileAbsolutePath: { regex: "/content/parts/copyrightNote/" }
+    ) {
+      html
     }
   }
 `;

@@ -5,14 +5,10 @@ import {
   // eslint-disable-next-line no-unused-vars
   global,
   Layout,
-  Article,
-  Bodytext,
-  Heading,
+  Hero,
   Seo,
   layout,
-  article,
-  bodytext,
-  heading,
+  hero,
 } from 'gatsby-starter-kit-themes/dist/default';
 
 import { themed } from 'gatsby-starter-kit-themes/dist/';
@@ -21,19 +17,14 @@ import config from 'content/meta/config';
 import menu from 'content/meta/menu';
 
 const LayoutThemed = themed({ themeStyle: layout })(Layout);
-const ArticleThemed = themed({ themeStyle: article })(Article);
-const BodytextThemed = themed({ themeStyle: bodytext })(Bodytext);
-const HeadingThemed = themed({ themeStyle: heading })(Heading);
+const HeroThemed = themed({ themeStyle: hero })(Hero);
 
 const IndexPage = props => {
   const {
     data: {
       footerLinks: { html: footerLinksHTML },
       copyrightNote: { html: copyrightNoteHTML },
-      welcome: {
-        html: welcomeHTML,
-        frontmatter: { title: welcomeTitle },
-      },
+      hero: { html: heroHTML },
     },
   } = props;
 
@@ -47,10 +38,7 @@ const IndexPage = props => {
       headerSubTitle={headerSubTitle}
       menu={menu}
     >
-      <ArticleThemed>
-        <HeadingThemed title={welcomeTitle} />
-        <BodytextThemed html={welcomeHTML} />
-      </ArticleThemed>
+      <HeroThemed html={heroHTML} />
       <Seo config={config} />
     </LayoutThemed>
   );
@@ -60,13 +48,8 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    welcome: markdownRemark(
-      fileAbsolutePath: { regex: "/content/parts/welcome/" }
-    ) {
+    hero: markdownRemark(fileAbsolutePath: { regex: "/content/parts/hero/" }) {
       html
-      frontmatter {
-        title
-      }
     }
     footerLinks: markdownRemark(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
