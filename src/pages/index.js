@@ -6,18 +6,21 @@ import {
   global,
   Layout,
   Hero,
+  Footer,
+  Header,
+  Branding,
+  Menu,
   Seo,
   layout,
   hero,
+  footer,
+  header,
+  branding,
+  menu,
 } from 'gatsby-starter-kit-themes/dist/default';
 
-import { themed } from 'gatsby-starter-kit-themes/dist/';
-
 import config from 'content/meta/config';
-import menu from 'content/meta/menu';
-
-const LayoutThemed = themed({ themeStyle: layout })(Layout);
-const HeroThemed = themed({ themeStyle: hero })(Hero);
+import menuItems from 'content/meta/menu';
 
 const IndexPage = props => {
   const {
@@ -31,16 +34,23 @@ const IndexPage = props => {
   const { headerTitle, headerSubTitle } = config;
 
   return (
-    <LayoutThemed
-      footerLinks={footerLinksHTML}
-      copyrightNote={copyrightNoteHTML}
-      headerTitle={headerTitle}
-      headerSubTitle={headerSubTitle}
-      menu={menu}
-    >
-      <HeroThemed html={heroHTML} />
+    <Layout themeStyle={layout} menu={menu}>
+      <Header themeStyle={header} menu={menu}>
+        <Branding
+          themeStyle={branding}
+          title={headerTitle}
+          subTitle={headerSubTitle}
+        />
+        <Menu themeStyle={menu} items={menuItems} />
+      </Header>
+      <Hero themeStyle={hero} html={heroHTML} />
+      <Footer
+        themeStyle={footer}
+        links={footerLinksHTML}
+        copyright={copyrightNoteHTML}
+      />
       <Seo config={config} />
-    </LayoutThemed>
+    </Layout>
   );
 };
 

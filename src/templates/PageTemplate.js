@@ -4,29 +4,37 @@ import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
 
-import config from 'content/meta/config';
-import menu from 'content/meta/menu';
-
 import {
   // eslint-disable-next-line no-unused-vars
   global,
   Layout,
-  Page,
+  Footer,
+  Header,
+  Branding,
+  Menu,
+  Article,
+  Heading,
+  Bodytext,
   Seo,
   layout,
-  page,
+  footer,
+  header,
+  branding,
+  menu,
+  article,
+  heading,
+  bodytext,
 } from 'gatsby-starter-kit-themes/dist/default';
 
-import { themed } from 'gatsby-starter-kit-themes/dist/';
-
-const LayoutThemed = themed({ themeStyle: layout })(Layout);
-const PageThemed = themed({ themeStyle: page })(Page);
+import config from 'content/meta/config';
+import menuItems from 'content/meta/menu';
 
 const PageTemplate = props => {
   const {
     data: {
       page,
       page: {
+        html: pageHTML,
         frontmatter: { title },
         fields: { slug },
       },
@@ -38,16 +46,26 @@ const PageTemplate = props => {
   const { headerTitle, headerSubTitle } = config;
 
   return (
-    <LayoutThemed
-      footerLinks={footerLinksHTML}
-      copyrightNote={copyrightNoteHTML}
-      headerTitle={headerTitle}
-      headerSubTitle={headerSubTitle}
-      menu={menu}
-    >
-      <PageThemed page={page} />
+    <Layout themeStyle={layout} menu={menu}>
+      <Header themeStyle={header} menu={menu}>
+        <Branding
+          themeStyle={branding}
+          title={headerTitle}
+          subTitle={headerSubTitle}
+        />
+        <Menu themeStyle={menu} items={menuItems} />
+      </Header>
+      <Article themeStyle={article}>
+        <Heading themeStyle={heading} title={title} />
+        <Bodytext themeStyle={bodytext} html={pageHTML} />
+      </Article>
+      <Footer
+        themeStyle={footer}
+        links={footerLinksHTML}
+        copyright={copyrightNoteHTML}
+      />
       <Seo config={config} />
-    </LayoutThemed>
+    </Layout>
   );
 };
 
