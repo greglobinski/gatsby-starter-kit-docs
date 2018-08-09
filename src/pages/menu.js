@@ -1,22 +1,23 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import Article from '../../../../mynpms/react-website-themes/src/docs/Article';
 import Branding from '../../../../mynpms/react-website-themes/src/docs/Branding';
 import Footer from '../../../../mynpms/react-website-themes/src/docs/Footer';
 import Header from '../../../../mynpms/react-website-themes/src/docs/Header';
-import Hero from '../../../../mynpms/react-website-themes/src/docs/Hero';
+import Heading from '../../../../mynpms/react-website-themes/src/docs/Heading';
 import Layout from '../../../../mynpms/react-website-themes/src/docs/Layout';
+import List from '../../../../mynpms/react-website-themes/src/docs/List';
 import Menu from '../../../../mynpms/react-website-themes/src/docs/Menu';
 import Seo from '../../../../mynpms/react-website-themes/src/docs/Seo';
-
-// ../../../../mynpms/react-website-themes/src/docs/
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
 
-const IndexPage = props => {
+const MenuPage = props => {
   const {
     data: {
+      pages: { edges: rawItems },
       footerLinks: { html: footerLinksHTML },
       hero: { html: heroHTML },
       copyright: { html: copyrightHTML },
@@ -24,6 +25,7 @@ const IndexPage = props => {
   } = props;
 
   const { headerTitle, headerSubTitle } = config;
+  const items = rawItems.map(item => item.node);
 
   return (
     <Layout>
@@ -31,17 +33,36 @@ const IndexPage = props => {
         <Branding title={headerTitle} subTitle={headerSubTitle} />
         <Menu items={menuItems} />
       </Header>
-      <Hero html={heroHTML} />
+      <Article>
+        <Heading title="Table of content:" />
+        <List items={items} />
+      </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo config={config} />
     </Layout>
   );
 };
 
-export default IndexPage;
+export default MenuPage;
 
 export const query = graphql`
   query {
+    pages: allMarkdownRemark(
+      filter: { frontmatter: { categories: { in: ["docs"] } } }
+      sort: { fields: [fields___prefix] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            prefix
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
     hero: markdownRemark(fileAbsolutePath: { regex: "/content/parts/hero/" }) {
       html
     }

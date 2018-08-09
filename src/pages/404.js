@@ -1,15 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Article from 'react-website-themes/dist/default/components/Article';
-import Bodytext from 'react-website-themes/dist/default/components/Bodytext';
-import Branding from 'react-website-themes/dist/default/components/Branding';
-import Footer from 'react-website-themes/dist/default/components/Footer';
-import Header from 'react-website-themes/dist/default/components/Header';
-import Heading from 'react-website-themes/dist/default/components/Heading';
-import Layout from 'react-website-themes/dist/default/components/Layout';
-import Menu from 'react-website-themes/dist/default/components/Menu';
-import Seo from 'react-website-themes/dist/default/components/Seo';
+import Article from '../../../../mynpms/react-website-themes/src/docs/Article';
+import Bodytext from '../../../../mynpms/react-website-themes/src/docs/Bodytext';
+import Branding from '../../../../mynpms/react-website-themes/src/docs/Branding';
+import Footer from '../../../../mynpms/react-website-themes/src/docs/Footer';
+import Header from '../../../../mynpms/react-website-themes/src/docs/Header';
+import Heading from '../../../../mynpms/react-website-themes/src/docs/Heading';
+import Layout from '../../../../mynpms/react-website-themes/src/docs/Layout';
+import Menu from '../../../../mynpms/react-website-themes/src/docs/Menu';
+import Seo from '../../../../mynpms/react-website-themes/src/docs/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';

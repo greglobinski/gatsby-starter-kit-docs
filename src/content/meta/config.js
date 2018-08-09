@@ -1,15 +1,15 @@
 const base = {
-  name: 'Gatsby Starter Kit - docs',
+  name: 'Gatsby Starter Kit Docs',
   url: 'https://github.com/greglobinski/gatsby-starter-kit-docs',
+  author: 'greg lobinski',
+  nick: 'greglobinski',
 };
 
 const config = {
   /* meta tags */
-  siteTitle: `${base.name} - a series of GatsbyJS starters`,
+  siteTitle: `${base.name} - documentation, instructions, tutorials...`,
   siteTitlePostfix: ` - ${base.name}`,
-  siteDescription: `${
-    base.name
-  } is a series starters: Minimal, Equipped, Themed, Website, Blog.`,
+  siteDescription: `This is Docs for gatsby-starter-kit, a series of starters for GatsbyJS.`,
   siteImage: 'preview.jpg',
   siteLanguage: 'en',
 
