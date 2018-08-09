@@ -1,6 +1,6 @@
 const base = {
-  name: 'Gatsby Starter Kit',
-  url: 'https://github.com/greglobinski/gatsby-starter-kit'
+  name: 'Gatsby Starter Kit - docs',
+  url: 'https://github.com/greglobinski/gatsby-starter-kit-docs',
 };
 
 const config = {
@@ -18,7 +18,7 @@ const config = {
   headerSubTitle: 'a series of starters for GatsbyJS',
 
   /* url */
-  siteUrl: base.url
+  siteUrl: base.url,
   // pathPrefix: '',
 };
 
