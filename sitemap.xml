@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/licence/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/classy-docs-starter/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/blog-starter/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/website-starter/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/themed-starter/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/equipped-starter/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/minimal-starter/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/advanced-usage/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/default-usage/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/prerequisites/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/docs/whats-gatsby-starter-kit/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/copyright/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/footerLinks/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/notFound/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/hero/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/welcome/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/content/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://github.com/greglobinski/gatsby-starter-kit-docs/gatsby-starter-kit-docs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
