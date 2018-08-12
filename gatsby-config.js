@@ -2,6 +2,7 @@ require('dotenv').config();
 const config = require('./src/content/meta/config');
 
 module.exports = {
+  pathPrefix: `/gatsby-starter-kit-docs`,
   siteMetadata: {
     title: config.siteTitle,
     siteUrl: config.siteUrl,

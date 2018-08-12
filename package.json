@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-base",
-  "description": "GatsbyJS base starter",
+  "name": "gatsby-starter-kit-docs",
+  "description": "Gatsby Starter Kit Docs website",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -8,7 +8,8 @@
     "serve": "gatsby serve",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "emotion": "^9.2.6",
@@ -56,6 +57,7 @@
     "eslint-plugin-jest": "^21.18.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "7.1.0",
+    "gh-pages": "^1.2.0",
     "jest": "^23.4.1",
     "js-yaml": "^3.12.0",
     "prettier": "^1.13.7",
