@@ -5,8 +5,8 @@ import FolderPlusIcon from 'react-feather/dist/icons/folder-plus';
 
 export const categories = [
   { name: 'general', label: 'Get started', icon: SettingsIcon },
-  { name: 'starter', label: 'Default Starters', icon: GitBranchIcon },
-  { name: 'theme', label: 'Themes', icon: ImageIcon },
+  { name: 'starter', label: 'Default starters', icon: GitBranchIcon },
+  { name: 'themed', label: 'Themed starters', icon: ImageIcon },
   { name: 'other', label: 'Everything else', icon: FolderPlusIcon },
 ];
 
