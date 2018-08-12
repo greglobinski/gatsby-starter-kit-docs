@@ -5,7 +5,7 @@ categories: ['general']
 
 The **advanced** relates to you **Git** experience. You need some of that to really benefit from **Advanced usage**, otherwise you are looking for trouble.
 
-You do not need to be a git master, but you should know what `git merge` and `git rebase` are. You should be able to resolve Git conflicts which sometimes come into being after using mentioned commands.
+You do not need to be a git master, but you should know what `git merge` and `git rebase` are. You should be able to resolve Git conflicts which sometimes come into being after using the mentioned commands.
 
 The **Advanced usage** installation process is much longer and sweaty than the **Default** one. But it could be really beneficial but it can bring big benefits afterwards, during the website maintaining.
 
