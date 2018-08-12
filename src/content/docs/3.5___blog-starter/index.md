@@ -1,6 +1,7 @@
 ---
-title: Features
-categories: ['docs']
+title: Blog starter
+shortTitle: Blog
+categories: ['starter']
 ---
 
 - Content in **Markdown** files (posts, pages and parts) placed in dedicated folder `content`

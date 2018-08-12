@@ -1,15 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Article from '../../../../mynpms/react-website-themes/src/docs/Article';
-import Branding from '../../../../mynpms/react-website-themes/src/docs/Branding';
-import Footer from '../../../../mynpms/react-website-themes/src/docs/Footer';
-import Header from '../../../../mynpms/react-website-themes/src/docs/Header';
-import Heading from '../../../../mynpms/react-website-themes/src/docs/Heading';
-import Layout from '../../../../mynpms/react-website-themes/src/docs/Layout';
-import List from '../../../../mynpms/react-website-themes/src/docs/List';
-import Menu from '../../../../mynpms/react-website-themes/src/docs/Menu';
-import Seo from '../../../../mynpms/react-website-themes/src/docs/Seo';
+import Article from '../../../../mynpms/react-website-themes/src/docs/components/Article';
+import Branding from '../../../../mynpms/react-website-themes/src/docs/components/Branding';
+import Footer from '../../../../mynpms/react-website-themes/src/docs/components/Footer';
+import Header from '../../../../mynpms/react-website-themes/src/docs/components/Header';
+import Heading from '../../../../mynpms/react-website-themes/src/docs/components/Heading';
+import Layout from '../../../../mynpms/react-website-themes/src/docs/components/Layout';
+import List from '../../../../mynpms/react-website-themes/src/docs/components/List';
+import Menu from '../../../../mynpms/react-website-themes/src/docs/components/Menu';
+import Seo from '../../../../mynpms/react-website-themes/src/docs/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
@@ -19,7 +19,6 @@ const MenuPage = props => {
     data: {
       pages: { edges: rawItems },
       footerLinks: { html: footerLinksHTML },
-      hero: { html: heroHTML },
       copyright: { html: copyrightHTML },
     },
   } = props;
@@ -34,7 +33,7 @@ const MenuPage = props => {
         <Menu items={menuItems} />
       </Header>
       <Article>
-        <Heading title="Table of content:" />
+        <Heading title="Table of content" />
         <List items={items} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
@@ -59,6 +58,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            categories
           }
         }
       }

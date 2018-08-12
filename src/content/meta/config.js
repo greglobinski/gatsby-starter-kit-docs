@@ -1,5 +1,5 @@
 const base = {
-  name: 'Gatsby Starter Kit Docs',
+  name: 'Gatsby Starter Kit',
   url: 'https://github.com/greglobinski/gatsby-starter-kit-docs',
   author: 'greg lobinski',
   nick: 'greglobinski',
@@ -7,7 +7,7 @@ const base = {
 
 const config = {
   /* meta tags */
-  siteTitle: `${base.name} - documentation, instructions, tutorials...`,
+  siteTitle: `${base.name} - a set of starters for GatsbyJS`,
   siteTitlePostfix: ` - ${base.name}`,
   siteDescription: `This is Docs for gatsby-starter-kit, a series of starters for GatsbyJS.`,
   siteImage: 'preview.jpg',
@@ -15,7 +15,7 @@ const config = {
 
   /* site header */
   headerTitle: `${base.name}`,
-  headerSubTitle: 'a series of starters for GatsbyJS',
+  headerSubTitle: 'a set of starters for Gatsby.js',
 
   /* url */
   siteUrl: base.url,

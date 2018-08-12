@@ -1,15 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Img from "gatsby-image";
+ 
 
-import Branding from '../../../../mynpms/react-website-themes/src/docs/Branding';
-import Footer from '../../../../mynpms/react-website-themes/src/docs/Footer';
-import Header from '../../../../mynpms/react-website-themes/src/docs/Header';
-import Hero from '../../../../mynpms/react-website-themes/src/docs/Hero';
-import Layout from '../../../../mynpms/react-website-themes/src/docs/Layout';
-import Menu from '../../../../mynpms/react-website-themes/src/docs/Menu';
-import Seo from '../../../../mynpms/react-website-themes/src/docs/Seo';
-
-// ../../../../mynpms/react-website-themes/src/docs/
+import Branding from '../../../../mynpms/react-website-themes/src/docs/components/Branding';
+import Footer from '../../../../mynpms/react-website-themes/src/docs/components/Footer';
+import Header from '../../../../mynpms/react-website-themes/src/docs/components/Header';
+import Hero from '../../../../mynpms/react-website-themes/src/docs/components/Hero';
+import Layout from '../../../../mynpms/react-website-themes/src/docs/components/Layout';
+import Menu from '../../../../mynpms/react-website-themes/src/docs/components/Menu';
+import Seo from '../../../../mynpms/react-website-themes/src/docs/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
@@ -20,6 +20,11 @@ const IndexPage = props => {
       footerLinks: { html: footerLinksHTML },
       hero: { html: heroHTML },
       copyright: { html: copyrightHTML },
+      logo: {
+        childImageSharp: {
+          fluid: logoFluid
+        }
+      }
     },
   } = props;
 
@@ -31,7 +36,10 @@ const IndexPage = props => {
         <Branding title={headerTitle} subTitle={headerSubTitle} />
         <Menu items={menuItems} />
       </Header>
-      <Hero html={heroHTML} />
+      <Hero>
+        <Img fluid={logoFluid} className="image"/>    
+        <div dangerouslySetInnerHTML={{ __html: heroHTML }} />
+      </Hero>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo config={config} />
     </Layout>
@@ -42,6 +50,13 @@ export default IndexPage;
 
 export const query = graphql`
   query {
+    logo: file(relativePath: { regex: "/logo.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }    
     hero: markdownRemark(fileAbsolutePath: { regex: "/content/parts/hero/" }) {
       html
     }

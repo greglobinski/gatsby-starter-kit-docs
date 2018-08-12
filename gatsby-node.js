@@ -3,15 +3,24 @@ const Promise = require('bluebird');
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+const SLUG_SEPARATOR = '___';
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
+    const fileNode = getNode(node.parent);
     const filePath = createFilePath({ node, getNode });
 
-    const separtorIndex = ~filePath.indexOf('--') ? filePath.indexOf('--') : 0;
-    const slugStart = separtorIndex ? separtorIndex + 2 : 0;
+    const source = fileNode.sourceInstanceName;
 
-    const slug = `${separtorIndex ? '/' : ''}${filePath.substring(slugStart)}`;
+    const separtorIndex = ~filePath.indexOf(SLUG_SEPARATOR)
+      ? filePath.indexOf(SLUG_SEPARATOR)
+      : 0;
+    const slugIndex = separtorIndex ? separtorIndex + SLUG_SEPARATOR.length : 0;
+
+    const slug = `${source === 'docs' ? '/docs' : ''}${
+      separtorIndex ? '/' : ''
+    }${filePath.substring(slugIndex)}`;
     const identifier = slug.replace(/\//g, '');
     const prefix = separtorIndex ? filePath.substring(1, separtorIndex) : '';
 
@@ -30,6 +39,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `prefix`,
       value: prefix,
     });
+    createNodeField({
+      node,
+      name: `source`,
+      value: source,
+    });
   }
 };
 
@@ -43,7 +57,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(`
         {
           allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "//pages//" } }
+            filter: { fileAbsolutePath: { regex: "//pages|docs//" } }
             sort: { fields: [fields___prefix], order: DESC }
             limit: 1000
           ) {
@@ -90,7 +104,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // create pages
         const pages = items.filter(item =>
-          /pages/.test(item.node.fileAbsolutePath)
+          /pages|docs/.test(item.node.fileAbsolutePath)
         );
         pages.forEach(({ node }) => {
           const slug = node.fields.slug;

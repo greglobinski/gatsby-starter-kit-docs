@@ -4,49 +4,65 @@ import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
 
-import Article from 'react-website-themes/dist/default/components/Article';
-import Branding from 'react-website-themes/dist/default/components/Branding';
-import Bodytext from 'react-website-themes/dist/default/components/Bodytext';
-import Footer from 'react-website-themes/dist/default/components/Footer';
-import Header from 'react-website-themes/dist/default/components/Header';
-import Heading from 'react-website-themes/dist/default/components/Heading';
-import Hero from 'react-website-themes/dist/default/components/Hero';
-import Layout from 'react-website-themes/dist/default/components/Layout';
-import Menu from 'react-website-themes/dist/default/components/Menu';
-import Seo from 'react-website-themes/dist/default/components/Seo';
+import Article from '../../../../mynpms/react-website-themes/src/docs/components/Article';
+import Branding from '../../../../mynpms/react-website-themes/src/docs/components/Branding';
+import Bodytext from '../../../../mynpms/react-website-themes/src/docs/components/Bodytext';
+import Footer from '../../../../mynpms/react-website-themes/src/docs/components/Footer';
+import Header from '../../../../mynpms/react-website-themes/src/docs/components/Header';
+import Heading from '../../../../mynpms/react-website-themes/src/docs/components/Heading';
+import Layout from '../../../../mynpms/react-website-themes/src/docs/components/Layout';
+import Menu from '../../../../mynpms/react-website-themes/src/docs/components/Menu';
+import Seo from '../../../../mynpms/react-website-themes/src/docs/components/Seo';
+import Sidebar from '../../../../mynpms/react-website-themes/src/docs/components/Sidebar';
+import layoutSidebar from '../../../../mynpms/react-website-themes/src/docs/styles/layoutSidebar';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
+import categoryList from 'content/meta/categories';
 
 const PageTemplate = props => {
   const {
+    location: { pathname },
     data: {
-      page,
       page: {
         html: pageHTML,
-        frontmatter: { title },
-        fields: { slug },
+        frontmatter: { title, categories },
+        fields: { slug, source },
       },
+      pages: { edges: nodePages },
       footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
     },
   } = props;
 
   const { headerTitle, headerSubTitle } = config;
+  const pages = nodePages.map(item => item.node);
+  const layoutStyle = source === 'docs' ? layoutSidebar : undefined;
 
   return (
-    <Layout>
-      <Header>
-        <Branding title={headerTitle} subTitle={headerSubTitle} />
-        <Menu items={menuItems} />
-      </Header>
-      <Article>
-        <Heading title={title} />
-        <Bodytext html={pageHTML} />
-      </Article>
-      <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-      <Seo config={config} />
-    </Layout>
+    <React.Fragment>
+      {layoutStyle && (
+        <Sidebar
+          title="Table of content"
+          pages={pages}
+          categoryList={categoryList}
+          pathname={pathname}
+        />
+      )}
+
+      <Layout themeStyle={layoutStyle}>
+        <Header>
+          <Branding title={headerTitle} subTitle={headerSubTitle} />
+          <Menu items={menuItems} />
+        </Header>
+        <Article>
+          <Heading title={title} />
+          <Bodytext html={pageHTML} />
+        </Article>
+        <Footer links={footerLinksHTML} copyright={copyrightHTML} />
+        <Seo config={config} />
+      </Layout>
+    </React.Fragment>
   );
 };
 
@@ -65,10 +81,35 @@ export const query = graphql`
       fields {
         slug
         prefix
+        source
       }
       frontmatter {
         title
+        shortTitle
         categories
+      }
+    }
+    pages: allMarkdownRemark(
+      filter: { fields: { source: { eq: "docs" } } }
+      sort: { fields: [fields___prefix] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            prefix
+          }
+          frontmatter {
+            title
+            shortTitle
+            categories
+          }
+          headings {
+            value
+            depth
+          }
+          tableOfContents
+        }
       }
     }
     footerLinks: markdownRemark(
@@ -83,3 +124,5 @@ export const query = graphql`
     }
   }
 `;
+
+//filter: { frontmatter: { categories: { in: ["docs"] } } }//

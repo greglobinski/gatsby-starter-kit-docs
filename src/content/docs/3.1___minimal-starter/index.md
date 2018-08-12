@@ -1,0 +1,83 @@
+---
+title: Minimal starter
+shortTitle: Minimal
+categories: ['starter']
+---
+
+The **Minimal** starter is the simplest one in the set. Nothing fancy, just a bunch of React components plus essential Gatsby plugins.
+
+## Features
+
+- A bunch of ready to use structural no-style **React components**.
+- Markdown **parts** files for editing content without touching Components' code.
+- Central **config** object.
+- Easy editable **menu**.
+- Feather **icons**.
+
+## Gatsby plugins
+
+- gatsby-source-filesystem
+- gatsby-transformer-remark
+- gatsby-plugin-resolve-src
+- gatsby-plugin-catch-links
+
+## Add-ons
+
+- react-feather
+
+## Folder structure
+
+```
+root
+  └── src
+      ├── content
+      │   ├── meta
+      │   │   ├── config.js
+      │   │   └── menu.js
+      │   └── parts
+      │       ├── copyright.md
+      │       ├── footerLinks.md
+      │       ├── notFound.md
+      │       └── welcome.md
+      ├── pages
+      │   ├── 404.js
+      │   └── index.js
+      └── starter
+          ├── Article.js
+          ├── Bodytext.js
+          ├── Branding.js
+          ├── Footer.js
+          ├── Header.js
+          ├── Heading.js
+          ├── Layout.js
+          ├── MainMenu.js
+          └── MainMenuItem.js
+```
+
+## Installation
+
+**Default usage**
+
+```shell
+gatsby new [NEW_DIRECTORY_FOR_YOUR_SITE] https://github.com/greglobinski/gatsby-starter-kit.git#minimal-with-content
+...
+cd [NEW_DIRECTORY_FOR_YOUR_SITE]
+...
+gatsby develop
+```
+
+**Advanced usage**
+
+Fork the [repository](https://github.com/greglobinski/gatsby-starter-kit).
+
+```shell
+git clone https://github.com/[your-github-name]/gatsby-starter-kit.git [NEW_DIRECTORY_FOR_YOUR_SITE]
+...
+git checkout --track origin/minimal-with-content
+...
+git checkout -b my-minimal
+...
+yarn install
+...
+gatsby develop
+```

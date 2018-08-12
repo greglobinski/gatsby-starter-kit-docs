@@ -1,4 +1,7 @@
-MIT License
+---
+title: License
+categories: ['docs', 'other']
+---
 
 Copyright (c) 2018 greg lobinski
 
