@@ -128,3 +128,5 @@ I strongly suggest to create a new local branch base on the starter branch befor
 ```
 git checkout -b my-website
 ```
+
+More guides soon.

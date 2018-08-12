@@ -29,7 +29,7 @@ gatsby new [NEW_DIRECTORY_FOR_YOUR_SITE] https://github.com/greglobinski/gatsby-
 
 ## With or without content?
 
-For every Kit's starter, there are three **git** branches. Let's take a closer look at the **website** starter. There are [three](https://github.com/greglobinski/gatsby-starter-kit/branches/all?utf8=%E2%9C%93&query=website) branches in the repo.
+For every Kit's starter, there are three **git** branches. Let's take a closer look at the **Website** starter. There are [three](https://github.com/greglobinski/gatsby-starter-kit/branches/all?utf8=%E2%9C%93&query=website) branches in the repo.
 
 - website
 - website-with-content
@@ -49,4 +49,4 @@ gatsby new [NEW_DIRECTORY_FOR_YOUR_SITE] https://github.com/greglobinski/gatsby-
 
 will throw errors when you will try to start dev server. So remember, always choose **...-with-content** branch.
 
-So for what are these other branches. That's the subject of [Advanced usage](../advanced-usage).
+You may ask, for what are all these other branches? And that's the subject of [Advanced usage](../advanced-usage) :)
