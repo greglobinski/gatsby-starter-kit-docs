@@ -4,17 +4,99 @@ shortTitle: Website
 categories: ['starter']
 ---
 
-- Content in **Markdown** files (posts, pages and parts) placed in dedicated folder `content`
-- **Code** syntax highlighting
-- Responsive, optimized **images** (lazy loading, srcset, webp)
-- **Comments** - [Facebook](https://developers.facebook.com/docs/plugins/comments/)
-- Post **categories**
-- **Category** pages
-- Social **share buttons** - [react-custom-share](https://www.npmjs.com/package/react-custom-share)
-- Google **Analytics**
-- XML **site map**
-- **SVG** icons - [react-icons](https://www.npmjs.com/package/react-icons)
-- **SEO** (robot.txt, general and OpenGraph tags)
-- \**Linting*8 - (ESLint)[https://eslint.org/] with [cra config](https://www.npmjs.com/package/eslint-config-react-app)
-- Code **formating** - [Prettier](https://github.com/prettier/prettier)
-- Environment \*\*variables - [dotenv](https://www.npmjs.com/package/dotenv)
+The **Website** starter is built upon the [Themed](../themed-starter) but lets you create pages with **Markdown** files. You do not have to create a **React** page component.
+
+## Features
+
+- A bunch of ready to use **themeable** React components.
+- Default **theme** applied to all components.
+- Markdown **pages** files for easily creating new web pages.
+- **Categories** for markdown pages.
+- Markdown **parts** files for editing content without touching Components' code.
+- Central **config** object.
+- Easy editable **menu**.
+- Feather **icons**.
+- **Seo** component for managing meta tags.
+- Google **Analytics** support.
+- Auto generated **sitemap**.
+
+## Gatsby plugins
+
+- gatsby-source-filesystem
+- gatsby-transformer-remark
+- gatsby-remark-images
+- gatsby-remark-prismjs
+- gatsby-remark-copy-linked-file
+- gatsby-remark-responsive-iframe
+- gatsby-remark-smartypants
+- gatsby-remark-emojis
+- gatsby-plugin-resolve-src
+- gatsby-plugin-catch-links
+- gatsby-plugin-sitemap
+- gatsby-plugin-google-analytics
+- gatsby-plugin-react-helmet
+- gatsby-plugin-emotion
+
+## Add-ons
+
+- react-website-themes
+- emotion
+- react-emotion
+- emotion-server
+- facepaint
+- react-feather
+- react-helmet
+
+## Folder structure
+
+```
+root
+  └── src
+      ├── content
+      │   ├── meta
+      │   │   ├── config.js
+      │   │   └── menu.js
+      │   ├── pages
+      │   │   ├── catalog
+      │   │   │   └── index.md
+      │   │   └── about
+      │   │       └── index.md
+      │   └── parts
+      │       ├── copyright.md
+      │       ├── footerLinks.md
+      │       ├── notFound.md
+      │       └── welcome.md
+      ├── pages
+      │   ├── 404.js
+      │   └── index.js
+      └── templates
+          └── PageTemplate.js
+```
+
+## Installation
+
+**Default usage**
+
+```shell
+gatsby new [NEW_DIRECTORY_FOR_YOUR_SITE] https://github.com/greglobinski/gatsby-starter-kit.git#website-with-content
+...
+cd [NEW_DIRECTORY_FOR_YOUR_SITE]
+...
+gatsby develop
+```
+
+**Advanced usage**
+
+Fork the [repository](https://github.com/greglobinski/gatsby-starter-kit).
+
+```shell
+git clone https://github.com/[your-github-name]/gatsby-starter-kit.git [NEW_DIRECTORY_FOR_YOUR_SITE]
+...
+git checkout --track origin/website-with-content
+...
+git checkout -b my-website
+...
+yarn install
+...
+gatsby develop
+```

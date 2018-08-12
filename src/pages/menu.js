@@ -47,7 +47,7 @@ export default MenuPage;
 export const query = graphql`
   query {
     pages: allMarkdownRemark(
-      filter: { frontmatter: { categories: { in: ["docs"] } } }
+      filter: { fields: { source: { eq: "docs" } } }
       sort: { fields: [fields___prefix] }
     ) {
       edges {
