@@ -3,13 +3,13 @@ import { graphql } from 'gatsby';
 import Img from "gatsby-image";
  
 
-import Branding from '../../../../mynpms/react-website-themes/src/docs/components/Branding';
-import Footer from '../../../../mynpms/react-website-themes/src/docs/components/Footer';
-import Header from '../../../../mynpms/react-website-themes/src/docs/components/Header';
-import Hero from '../../../../mynpms/react-website-themes/src/docs/components/Hero';
-import Layout from '../../../../mynpms/react-website-themes/src/docs/components/Layout';
-import Menu from '../../../../mynpms/react-website-themes/src/docs/components/Menu';
-import Seo from '../../../../mynpms/react-website-themes/src/docs/components/Seo';
+import Branding from 'react-website-themes/dist/classy-docs/components/Branding';
+import Footer from 'react-website-themes/dist/classy-docs/components/Footer';
+import Header from 'react-website-themes/dist/classy-docs/components/Header';
+import Hero from 'react-website-themes/dist/classy-docs/components/Hero';
+import Layout from 'react-website-themes/dist/classy-docs/components/Layout';
+import Menu from 'react-website-themes/dist/classy-docs/components/Menu';
+import Seo from 'react-website-themes/dist/classy-docs/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';

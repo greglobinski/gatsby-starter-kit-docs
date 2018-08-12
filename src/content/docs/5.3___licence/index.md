@@ -3,7 +3,7 @@ title: License
 categories: ['other']
 ---
 
-[Gatsby Starter Kit](https://github.com/greglobinski/gatsby-starter-kit) is licenesd under the MIT License (MIT)
+[Gatsby Starter Kit](https://github.com/greglobinski/gatsby-starter-kit) is licensed under the MIT License (MIT)
 
 Copyright (c) 2018 greg lobinski
 

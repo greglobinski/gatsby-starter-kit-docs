@@ -1,15 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Article from '../../../../mynpms/react-website-themes/src/docs/components/Article';
-import Bodytext from '../../../../mynpms/react-website-themes/src/docs/components/Bodytext';
-import Branding from '../../../../mynpms/react-website-themes/src/docs/components/Branding';
-import Footer from '../../../../mynpms/react-website-themes/src/docs/components/Footer';
-import Header from '../../../../mynpms/react-website-themes/src/docs/components/Header';
-import Heading from '../../../../mynpms/react-website-themes/src/docs/components/Heading';
-import Layout from '../../../../mynpms/react-website-themes/src/docs/components/Layout';
-import Menu from '../../../../mynpms/react-website-themes/src/docs/components/Menu';
-import Seo from '../../../../mynpms/react-website-themes/src/docs/components/Seo';
+import Article from 'react-website-themes/dist/classy-docs/components/Article';
+import Bodytext from 'react-website-themes/dist/classy-docs/components/Bodytext';
+import Branding from 'react-website-themes/dist/classy-docs/components/Branding';
+import Footer from 'react-website-themes/dist/classy-docs/components/Footer';
+import Header from 'react-website-themes/dist/classy-docs/components/Header';
+import Heading from 'react-website-themes/dist/classy-docs/components/Heading';
+import Layout from 'react-website-themes/dist/classy-docs/components/Layout';
+import Menu from 'react-website-themes/dist/classy-docs/components/Menu';
+import Seo from 'react-website-themes/dist/classy-docs/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';

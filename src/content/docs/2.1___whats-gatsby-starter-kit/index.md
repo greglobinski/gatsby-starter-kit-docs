@@ -5,7 +5,7 @@ categories: ['general']
 
 **Gatsby Starter Kit** is a set of starters for [Gatsby.js](https://gatsbyjs.org) **v2**, created and maintained by [me](../../about).
 
-There are **five** general starters:
+There are **five** default starters:
 
 - Minimal
 - Equipped
@@ -13,7 +13,7 @@ There are **five** general starters:
 - Website
 - Blog
 
-Every of the general starters are built on top of the previous one with additional features.
+Every of the default starters are built on top of the previous one with additional features.
 
 The starters are maintain as separate branches of the same [git repository](https://github.com/greglobinski/gatsby-starter-kit).
 
