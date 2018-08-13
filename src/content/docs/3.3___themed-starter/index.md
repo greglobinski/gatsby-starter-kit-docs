@@ -4,7 +4,7 @@ shortTitle: Themed
 categories: ['starter']
 ---
 
-The **Themed** starter is the one where the real fun starts :sparkles: :tada:
+The **Themed** starter is the one where the real fun starts. :sparkles: :tada:
 
 The local React components are displaced by the **outer library's components** which could be styled with built-in or custom **themes**.
 
@@ -60,7 +60,7 @@ root
           └── index.js
 ```
 
-Have you noticed that the components disappeared? :astonished:
+Have you noticed that the components disappeared? :astonished: More about that soon in a separate **Guides** section. Follow [me](https://twitter.com/greglobinski) to be informed about the updates.
 
 ## Installation
 

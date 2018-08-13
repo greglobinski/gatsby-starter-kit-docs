@@ -14,7 +14,12 @@ The **Blog** starter is the most advanced **default** starter in the **Kit**. It
 - Automaticaly created **Category** pages for blog posts.
 - Web pages automatically created from markdown **pages** files.
 - **Categories** for markdown **posts** and **pages**.
-- Markdown **parts** files let you edit content inside React components without touching the code.
+- Markdown **parts** files let you edit content inside
+  React components without touching the code.
+- **Author** block below every post content.
+- **Next / Prev** block below every post content.
+- **Comments** by Facebook widget.
+- **Social share** buttons block.
 - Central **config** object.
 - Easy editable **menu**.
 - Feather **icons**.

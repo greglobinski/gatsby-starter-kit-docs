@@ -22,30 +22,30 @@ The **Website** starter is built upon the [Themed](../themed-starter) but lets y
 
 ## Gatsby plugins
 
-- gatsby-source-filesystem
-- gatsby-transformer-remark
-- gatsby-remark-images
-- gatsby-remark-prismjs
-- gatsby-remark-copy-linked-file
-- gatsby-remark-responsive-iframe
-- gatsby-remark-smartypants
-- gatsby-remark-emojis
-- gatsby-plugin-resolve-src
+- gatsby-plugin-emotion
 - gatsby-plugin-catch-links
-- gatsby-plugin-sitemap
 - gatsby-plugin-google-analytics
 - gatsby-plugin-react-helmet
-- gatsby-plugin-emotion
+- gatsby-plugin-resolve-src
+- gatsby-plugin-sitemap
+- gatsby-remark-emojis
+- gatsby-remark-copy-linked-file
+- gatsby-remark-images
+- gatsby-remark-prismjs
+- gatsby-remark-responsive-iframe
+- gatsby-remark-smartypants
+- gatsby-source-filesystem
+- gatsby-transformer-remark
 
 ## Add-ons
 
-- react-website-themes
 - emotion
-- react-emotion
 - emotion-server
 - facepaint
+- react-emotion
 - react-feather
 - react-helmet
+- react-website-themes
 
 ## Folder structure
 
