@@ -3,15 +3,15 @@ title: Advanced usage
 categories: ['general']
 ---
 
-The **advanced** relates to you **Git** experience. You need some of that to really benefit from **Advanced usage**, otherwise you are looking for trouble.
+The '**advanced**' relates to your **Git** experience. You need some of that to really benefit from **Advanced usage**, otherwise you are looking for trouble.
 
 You do not need to be a git master, but you should know what `git merge` and `git rebase` are. You should be able to resolve Git conflicts which sometimes come into being after using the mentioned commands.
 
-The **Advanced usage** installation process is much longer and sweaty than the **Default** one. But it could be really beneficial but it can bring big benefits afterwards, during the website maintaining.
+The **Advanced usage** installation process is much longer and sweaty than the **Default** one. But it could be really beneficial afterwards, during the website maintaining.
 
-## What's the difference
+## What's the difference?
 
-In **Advanced usage** you cannot use `gatsby new`. The command installs Gatsby website but does not copy git **repository** to your localhost and there is no **Advanced usage** without the cloned repository.
+With **Advanced usage** you cannot use `gatsby new`. The command installs Gatsby website but does not copy git **repository** to your localhost and there is no **Advanced usage** without the cloned repository.
 
 With the cloned git repository you will be able to upgrade your localhost code if I refactor codebase in the `upstream` repo. Sure, sometimes it will not work without resolving **conflicts** but still.
 
@@ -19,7 +19,9 @@ With **Advanced usage** you will be able launch your site as a **Website** start
 
 ## Git clone
 
-Instead of `gatsby new` you will use the `git clone` command. But first you have to make your own fork of the Kit's [repository](https://github.com/greglobinski/gatsby-starter-kit). **Do not clone the original repo!**
+Instead of `gatsby new` you will use the `git clone` command. But first you have to make your own fork of the Kit's [repository](https://github.com/greglobinski/gatsby-starter-kit).
+
+:bangbang: **Do not clone the original repo!**
 
 ```shell
 git clone https://github.com/[your-github-name]/gatsby-starter-kit.git [NEW_DIRECTORY_FOR_YOUR_SITE]
@@ -37,7 +39,7 @@ List branches of the repo.
 git branch -a
 ```
 
-You will see a lot of branches but only one is tracked locally `master` the rest are remote branches.
+As you see there is a lot of branches but only one is tracked locally `master` the rest are remote branches.
 
 ```
 * master
@@ -107,13 +109,13 @@ Now, two branches `master` and `website-with-content` are tracked locally and `w
   remotes/origin/zero
 ```
 
-You are ready to install dependencies and launch the web server.
+You are ready to install dependencies.
 
 ```shell
 yarn install
 ```
 
-After installation launch web server using the `gatsby develop` command.
+When installation ends launch the web server using the `gatsby develop` command.
 
 ```shell
 gatsby develop
@@ -123,10 +125,10 @@ Done. You have a working website built on the **Website** starter.
 
 ## Developing
 
-I strongly suggest to create a new local branch base on the starter branch before you start making any changes in the code. Let's call it `my-website`.
+I strongly suggest to create a new local branch based on the starter branch before you start making any changes in the code. Let's call it `my-website`.
 
 ```
 git checkout -b my-website
 ```
 
-More guides soon.
+More guides soon. Follow [me](https://twitter.com/greglobinski) to be informed about updates.
