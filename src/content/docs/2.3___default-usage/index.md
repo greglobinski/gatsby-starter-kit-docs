@@ -9,19 +9,19 @@ categories: ['general']
 gatsby new [NEW_DIRECTORY_FOR_YOUR_SITE] https://github.com/greglobinski/gatsby-starter-kit.git
 ```
 
-The command is equivalent to
+The command is equivalent to one below.
 
 ```
 gatsby new [NEW_DIRECTORY_FOR_YOUR_SITE] https://github.com/greglobinski/gatsby-starter-kit.git#blog-with-content
 ```
 
-Note the `#blog-with-content` flag at the end of the repository `url`. The note informs **Gatsby CLI** that the installation should be based on the `blog-with-content` branch of the repository.
+Note the `#blog-with-content` flag at the end of the repository `url`. The flag informs **Gatsby CLI** the installation should be based on the `blog-with-content` branch of the repository.
 
 If you omit the flag, like in the first example, **Gatsby CLI** will use the `master` branch to built your site.
 
 The `master` branch of the **Gatsby Starter Kit** repo contains code of the `blog-with-content` branch plus some irrelevant from this point of view stuff like e.g README.md.
 
-Do you want to install different starter? Use different tag.
+Do you want to install different starter? Use different flag.
 
 ```
 gatsby new [NEW_DIRECTORY_FOR_YOUR_SITE] https://github.com/greglobinski/gatsby-starter-kit.git#website-with-content
