@@ -9,7 +9,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint src",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "rm --rf .cache public/ && gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "emotion": "^9.2.6",
