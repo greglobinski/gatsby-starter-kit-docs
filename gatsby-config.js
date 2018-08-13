@@ -75,11 +75,8 @@ module.exports = {
               // Add custom styles
               styles: {
                 display: 'inline',
-                margin: '0',
-                'margin-top': '1px',
-                position: 'relative',
-                top: '5px',
-                width: '25px',
+                width: '22px',
+                'vertical-align': 'top',
               },
             },
           },

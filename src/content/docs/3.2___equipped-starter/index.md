@@ -4,7 +4,7 @@ shortTitle: Equipped
 categories: ['starter']
 ---
 
-The **Equipped** starter is built upon the [Minimal](../minimal-starter) with some additions.
+The **Equipped** starter is built upon the [Minimal](../minimal-starter) one with some additions.
 
 ## Features
 
@@ -19,13 +19,13 @@ The **Equipped** starter is built upon the [Minimal](../minimal-starter) with so
 
 ## Gatsby plugins
 
-- gatsby-source-filesystem
-- gatsby-transformer-remark
-- gatsby-plugin-resolve-src
 - gatsby-plugin-catch-links
-- gatsby-plugin-sitemap
 - gatsby-plugin-google-analytics
 - gatsby-plugin-react-helmet
+- gatsby-plugin-resolve-src
+- gatsby-plugin-sitemap
+- gatsby-source-filesystem
+- gatsby-transformer-remark
 
 ## Add-ons
 

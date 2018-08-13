@@ -4,7 +4,9 @@ shortTitle: Themed
 categories: ['starter']
 ---
 
-The **Themed** starter is the one where the real fun starts :). The local React components are displaced by the **outer library's components** which could be styled with built-in or custom **themes**.
+The **Themed** starter is the one where the real fun starts :sparkles: :tada:
+
+The local React components are displaced by the **outer library's components** which could be styled with built-in or custom **themes**.
 
 ## Features
 
@@ -57,6 +59,8 @@ root
           ├── 404.js
           └── index.js
 ```
+
+Have you noticed that the components disappeared? :astonished:
 
 ## Installation
 

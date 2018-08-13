@@ -4,7 +4,7 @@ shortTitle: Minimal
 categories: ['starter']
 ---
 
-The **Minimal** starter is the simplest one in the set. Nothing fancy, just a bunch of React components plus essential Gatsby plugins.
+The **Minimal** starter is the simplest one in the set. Nothing fancy, just a bunch of React components plus a couple of Gatsby plugins.
 
 ## Features
 
@@ -16,10 +16,10 @@ The **Minimal** starter is the simplest one in the set. Nothing fancy, just a bu
 
 ## Gatsby plugins
 
+- gatsby-plugin-catch-links
+- gatsby-plugin-resolve-src
 - gatsby-source-filesystem
 - gatsby-transformer-remark
-- gatsby-plugin-resolve-src
-- gatsby-plugin-catch-links
 
 ## Add-ons
 
