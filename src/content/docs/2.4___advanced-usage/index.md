@@ -19,7 +19,11 @@ With **Advanced usage** you will be able launch your site as a **Website** start
 
 ## Git clone
 
-Instead of `gatsby new` you will use the `git clone` command. But first you have to make your own fork of the Kit's [repository](https://github.com/greglobinski/gatsby-starter-kit). :bangbang: :hand: **Do not clone the original repo!**
+Instead of `gatsby new` you will use the `git clone` command.
+
+But first you have to make your own fork of the Kit's [repository](https://github.com/greglobinski/gatsby-starter-kit).
+
+:bangbang: :hand: **Do not clone the original repo!**
 
 ```shell
 git clone https://github.com/[your-github-name]/gatsby-starter-kit.git [NEW_DIRECTORY_FOR_YOUR_SITE]
