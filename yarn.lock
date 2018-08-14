@@ -9690,9 +9690,9 @@ react-testing-library@^4.1.3:
     dom-testing-library "^3.0.1"
     wait-for-expect "^1.0.0"
 
-react-website-themes@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/react-website-themes/-/react-website-themes-0.0.6.tgz#414f4c3322ade05b33efadef400024a6ac804a94"
+react-website-themes@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-website-themes/-/react-website-themes-0.0.8.tgz#5f9afe5d3e612453dabcd234fa823d9c12e019b7"
   dependencies:
     github-slugger "^1.2.0"
     typeface-merriweather-sans "^0.0.54"
