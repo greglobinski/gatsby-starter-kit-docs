@@ -1,15 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Article from 'react-website-themes/dist/classy-docs/components/Article';
-import Branding from 'react-website-themes/dist/classy-docs/components/Branding';
-import Footer from 'react-website-themes/dist/classy-docs/components/Footer';
-import Header from 'react-website-themes/dist/classy-docs/components/Header';
-import Heading from 'react-website-themes/dist/classy-docs/components/Heading';
-import Layout from 'react-website-themes/dist/classy-docs/components/Layout';
-import List from 'react-website-themes/dist/classy-docs/components/List';
-import Menu from 'react-website-themes/dist/classy-docs/components/Menu';
-import Seo from 'react-website-themes/dist/classy-docs/components/Seo';
+import Article from '@react-website-themes/classy-docs/components/Article';
+import Branding from '@react-website-themes/classy-docs/components/Branding';
+import Footer from '@react-website-themes/classy-docs/components/Footer';
+import Header from '@react-website-themes/classy-docs/components/Header';
+import Heading from '@react-website-themes/classy-docs/components/Heading';
+import Layout from '@react-website-themes/classy-docs/components/Layout';
+import List from '@react-website-themes/classy-docs/components/List';
+import Menu from '@react-website-themes/classy-docs/components/Menu';
+import Seo from '@react-website-themes/classy-docs/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
@@ -24,7 +24,15 @@ const ContentPage = props => {
     },
   } = props;
 
-  const { headerTitle, headerSubTitle } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteTitle,
+    siteDescription,
+    siteLanguage,
+  } = config;
+
   const pages = rawPages.map(page => page.node);
 
   return (
@@ -38,7 +46,12 @@ const ContentPage = props => {
         <List pages={pages} categoryList={categoryList} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-      <Seo config={config} />
+      <Seo
+        url={siteUrl}
+        language={siteLanguage}
+        title={siteTitle}
+        description={siteDescription}
+      />
     </Layout>
   );
 };

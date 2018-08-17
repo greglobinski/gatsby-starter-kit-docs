@@ -2,6 +2,6 @@
 name: hero
 ---
 
-A set of starters for GatsbyJS: Minimal, Equipped, Themed, Website and Blog.
+A set of starters for Gatsby.js: Minimal, Equipped, Themed, Website and Blog.
 
-[Get Started](./docs/whats-gatsby-starter-kit/)
+[Get Started](./whats-gatsby-starter-kit/)

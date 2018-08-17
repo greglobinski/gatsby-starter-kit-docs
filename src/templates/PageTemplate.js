@@ -4,17 +4,17 @@ import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
 
-import Article from 'react-website-themes/dist/classy-docs/components/Article';
-import Branding from 'react-website-themes/dist/classy-docs/components/Branding';
-import Bodytext from 'react-website-themes/dist/classy-docs/components/Bodytext';
-import Footer from 'react-website-themes/dist/classy-docs/components/Footer';
-import Header from 'react-website-themes/dist/classy-docs/components/Header';
-import Heading from 'react-website-themes/dist/classy-docs/components/Heading';
-import Layout from 'react-website-themes/dist/classy-docs/components/Layout';
-import Menu from 'react-website-themes/dist/classy-docs/components/Menu';
-import Seo from 'react-website-themes/dist/classy-docs/components/Seo';
-import Sidebar from 'react-website-themes/dist/classy-docs/components/Sidebar';
-import layoutSidebar from 'react-website-themes/dist/classy-docs/styles/layoutSidebar';
+import Article from '@react-website-themes/classy-docs/components/Article';
+import Branding from '@react-website-themes/classy-docs/components/Branding';
+import Bodytext from '@react-website-themes/classy-docs/components/Bodytext';
+import Footer from '@react-website-themes/classy-docs/components/Footer';
+import Header from '@react-website-themes/classy-docs/components/Header';
+import Heading from '@react-website-themes/classy-docs/components/Heading';
+import Layout from '@react-website-themes/classy-docs/components/Layout';
+import Menu from '@react-website-themes/classy-docs/components/Menu';
+import Seo from '@react-website-themes/classy-docs/components/Seo';
+import Sidebar from '@react-website-themes/classy-docs/components/Sidebar';
+import layoutSidebar from '@react-website-themes/classy-docs/styles/layoutSidebar';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
@@ -26,8 +26,9 @@ const PageTemplate = props => {
     data: {
       page: {
         html: pageHTML,
-        frontmatter: { title, categories },
+        frontmatter: { title },
         fields: { slug, source },
+        excerpt,
       },
       pages: { edges: nodePages },
       footerLinks: { html: footerLinksHTML },
@@ -35,7 +36,14 @@ const PageTemplate = props => {
     },
   } = props;
 
-  const { headerTitle, headerSubTitle } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteLanguage,
+    siteTitlePostfix,
+  } = config;
+
   const pages = nodePages.map(item => item.node);
   const layoutStyle = source === 'docs' ? layoutSidebar : undefined;
 
@@ -50,7 +58,7 @@ const PageTemplate = props => {
         />
       )}
 
-      <Layout themeStyle={layoutStyle}>
+            <Layout themeStyle={layoutStyle}>
         <Header>
           <Branding title={headerTitle} subTitle={headerSubTitle} />
           <Menu items={menuItems} />
@@ -60,7 +68,12 @@ const PageTemplate = props => {
           <Bodytext html={pageHTML} />
         </Article>
         <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-        <Seo config={config} />
+        <Seo
+          url={`${siteUrl}${slug}`}
+          language={siteLanguage}
+          title={`${title}${siteTitlePostfix}`}
+          description={excerpt}
+        />
       </Layout>
     </React.Fragment>
   );
@@ -77,6 +90,7 @@ export const query = graphql`
   query PageTemplateQuery($slug: String!) {
     page: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       fileAbsolutePath
       fields {
         slug
@@ -86,7 +100,6 @@ export const query = graphql`
       frontmatter {
         title
         shortTitle
-        categories
       }
     }
     pages: allMarkdownRemark(
@@ -125,4 +138,3 @@ export const query = graphql`
   }
 `;
 
-//filter: { frontmatter: { categories: { in: ["docs"] } } }//
