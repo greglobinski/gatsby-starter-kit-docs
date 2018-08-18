@@ -8,7 +8,7 @@ The **Equipped** starter is built upon the [Minimal](../minimal-starter) one wit
 
 ![gatsby-starter-kit-equipped](./gatsby-starter-kit-equipped.png)
 
-<a class="demoLink"  href="https://gatsby-starter-kit-equipped.netlify.com">Live demo</a>
+<a class="demoLink"  href="https://gatsby-starter-kit-equipped.netlify.com" target="_blank">Live demo</a>
 
 ## Features
 

@@ -8,7 +8,7 @@ The **Minimal** starter is the simplest one in the set. Nothing fancy, just a bu
 
 ![gatsby-starter-kit-minimal](./gatsby-starter-kit-minimal.png)
 
-<a class="demoLink"  href="https://gatsby-starter-kit-minimal.netlify.com">Live demo</a>
+<a class="demoLink" target="_blank"  href="https://gatsby-starter-kit-minimal.netlify.com">Live demo</a>
 
 ## Features
 

@@ -8,7 +8,7 @@ The **Website** starter is built upon the [Themed](../themed-starter) but lets y
 
 ![gatsby-starter-kit-website](./gatsby-starter-kit-website.png)
 
-<a class="demoLink"  href="https://gatsby-starter-kit-website.netlify.com">Live demo</a>
+<a class="demoLink"   target="_blank" href="https://gatsby-starter-kit-website.netlify.com">Live demo</a>
 
 ## Features
 

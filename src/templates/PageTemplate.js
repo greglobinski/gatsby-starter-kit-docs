@@ -6,7 +6,8 @@ import 'prismjs/themes/prism-okaidia.css';
 
 import Article from '@react-website-themes/classy-docs/components/Article';
 import Branding from '@react-website-themes/classy-docs/components/Branding';
-import Bodytext from '@react-website-themes/classy-docs/components/Bodytext';
+//import Bodytext from '@react-website-themes/classy-docs/components/Bodytext';
+import Bodytext from '../../../../mynpms/react-website-themes/packages/classy-docs/src/components/Bodytext';
 import Footer from '@react-website-themes/classy-docs/components/Footer';
 import Header from '@react-website-themes/classy-docs/components/Header';
 import Heading from '@react-website-themes/classy-docs/components/Heading';
@@ -58,7 +59,7 @@ const PageTemplate = props => {
         />
       )}
 
-            <Layout themeStyle={layoutStyle}>
+      <Layout themeStyle={layoutStyle}>
         <Header>
           <Branding title={headerTitle} subTitle={headerSubTitle} />
           <Menu items={menuItems} />
@@ -137,4 +138,3 @@ export const query = graphql`
     }
   }
 `;
-

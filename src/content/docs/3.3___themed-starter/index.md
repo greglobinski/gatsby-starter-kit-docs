@@ -10,7 +10,7 @@ The local React components are displaced by the **outer library's components** w
 
 ![gatsby-starter-kit-themed](./gatsby-starter-kit-themed.png)
 
-<a class="demoLink"  href="https://gatsby-starter-kit-themed.netlify.com">Live demo</a>
+<a class="demoLink"  target="_blank" href="https://gatsby-starter-kit-themed.netlify.com">Live demo</a>
 
 ## Features
 

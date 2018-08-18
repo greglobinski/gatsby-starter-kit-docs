@@ -8,7 +8,7 @@ The **Blog** starter is the most advanced **default** starter in the **Kit**. It
 
 ![gatsby-starter-kit-blog](./gatsby-starter-kit-blog.png)
 
-<a class="demoLink" href="https://gatsby-starter-kit-blog.netlify.com">Live demo</a>
+<a class="demoLink"  target="_blank" href="https://gatsby-starter-kit-blog.netlify.com">Live demo</a>
 
 ## Features
 
