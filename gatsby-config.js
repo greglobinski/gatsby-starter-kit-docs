@@ -57,12 +57,16 @@ module.exports = {
             options: {
               maxWidth: 690,
               linkImagesToOriginal: false,
+              backgroundColor: 'transparent',
+              quality: 90,
+              withWebp: true,
             },
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-responsive-iframe`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-external-links`,
           {
             resolve: 'gatsby-remark-emojis',
             options: {
