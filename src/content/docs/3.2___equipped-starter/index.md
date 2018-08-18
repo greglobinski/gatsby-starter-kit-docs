@@ -6,6 +6,10 @@ categories: ['starter']
 
 The **Equipped** starter is built upon the [Minimal](../minimal-starter) one with some additions.
 
+![gatsby-starter-kit-equipped](./gatsby-starter-kit-equipped.png)
+
+<a class="demoLink"  href="https://gatsby-starter-kit-equipped.netlify.com">Live demo</a>
+
 ## Features
 
 - A bunch of ready to use structural no-style **React components**.

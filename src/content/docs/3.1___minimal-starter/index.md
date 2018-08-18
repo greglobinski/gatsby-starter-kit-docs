@@ -6,6 +6,10 @@ categories: ['starter']
 
 The **Minimal** starter is the simplest one in the set. Nothing fancy, just a bunch of React components plus a couple of Gatsby plugins.
 
+![gatsby-starter-kit-minimal](./gatsby-starter-kit-minimal.png)
+
+<a class="demoLink"  href="https://gatsby-starter-kit-minimal.netlify.com">Live demo</a>
+
 ## Features
 
 - A bunch of ready to use structural no-style **React components**.

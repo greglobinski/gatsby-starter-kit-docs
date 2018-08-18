@@ -8,6 +8,10 @@ The **Themed** starter is the one where the real fun starts. :sparkles: :tada:
 
 The local React components are displaced by the **outer library's components** which could be styled with built-in or custom **themes**.
 
+![gatsby-starter-kit-themed](./gatsby-starter-kit-themed.png)
+
+<a class="demoLink"  href="https://gatsby-starter-kit-themed.netlify.com">Live demo</a>
+
 ## Features
 
 - A bunch of ready to use **themeable** React components.

@@ -6,6 +6,10 @@ categories: ['starter']
 
 The **Blog** starter is the most advanced **default** starter in the **Kit**. It's the [Website](../website-starter) starter + **blog** functionality based on **markdown** files.
 
+![gatsby-starter-kit-blog](./gatsby-starter-kit-blog.png)
+
+<a class="demoLink" href="https://gatsby-starter-kit-blog.netlify.com">Live demo</a>
+
 ## Features
 
 - A bunch of ready to use **themeable** React components.

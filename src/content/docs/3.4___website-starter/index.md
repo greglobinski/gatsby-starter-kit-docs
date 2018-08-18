@@ -6,6 +6,10 @@ categories: ['starter']
 
 The **Website** starter is built upon the [Themed](../themed-starter) but lets you create pages with **Markdown** files. You do not have to create a **React** page component.
 
+![gatsby-starter-kit-website](./gatsby-starter-kit-website.png)
+
+<a class="demoLink"  href="https://gatsby-starter-kit-website.netlify.com">Live demo</a>
+
 ## Features
 
 - A bunch of ready to use **themeable** React components.
