@@ -54,7 +54,7 @@ const PageTemplate = props => {
           title="Table of content"
           pages={pages}
           categoryList={categoryList}
-          pathname={pathname}
+          pathname={slug}
         />
       )}
 
