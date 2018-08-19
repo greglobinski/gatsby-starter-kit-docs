@@ -796,9 +796,9 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@react-website-themes/classy-docs@^0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/classy-docs/-/classy-docs-0.0.14.tgz#c7afc3ab5188ae3e31f6a03ec689febf722de6c0"
+"@react-website-themes/classy-docs@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/classy-docs/-/classy-docs-0.0.16.tgz#c0f9a8e3c47805a39f9f29b8804d7032b38c834f"
   dependencies:
     github-slugger "^1.2.0"
     typeface-merriweather-sans "^0.0.54"

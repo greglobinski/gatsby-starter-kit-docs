@@ -70,13 +70,9 @@ module.exports = {
           {
             resolve: 'gatsby-remark-emojis',
             options: {
-              // Deactivate the plugin globally (default: true)
               active: true,
-              // Add a custom css class
-              class: 'emoji-icon',
-              // Select the size (available size: 16, 24, 32, 64)
+              class: 'emojiIcon',
               size: 64,
-              // Add custom styles
               styles: {
                 display: 'inline',
                 width: '22px',

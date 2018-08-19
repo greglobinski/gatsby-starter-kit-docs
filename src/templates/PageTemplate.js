@@ -22,7 +22,6 @@ import categoryList from 'content/meta/categories';
 
 const PageTemplate = props => {
   const {
-    location: { pathname },
     data: {
       page: {
         html: pageHTML,
