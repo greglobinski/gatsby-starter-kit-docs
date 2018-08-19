@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
+import '@react-website-themes/classy-docs/styles/variables';
+import '@react-website-themes/classy-docs/styles/global';
 
 import Article from '@react-website-themes/classy-docs/components/Article';
 import Branding from '@react-website-themes/classy-docs/components/Branding';
@@ -22,6 +24,7 @@ import categoryList from 'content/meta/categories';
 
 const PageTemplate = props => {
   const {
+    location: { pathname },
     data: {
       page: {
         html: pageHTML,
@@ -56,7 +59,6 @@ const PageTemplate = props => {
           pathname={slug}
         />
       )}
-
       <Layout themeStyle={layoutStyle}>
         <Header>
           <Branding title={headerTitle} subTitle={headerSubTitle} />
@@ -99,6 +101,29 @@ export const query = graphql`
       frontmatter {
         title
         shortTitle
+      }
+    }
+    pages: allMarkdownRemark(
+      filter: { fields: { source: { eq: "docs" } } }
+      sort: { fields: [fields___prefix] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            prefix
+          }
+          frontmatter {
+            title
+            shortTitle
+            categories
+          }
+          headings {
+            value
+            depth
+          }
+          tableOfContents
+        }
       }
     }
     pages: allMarkdownRemark(

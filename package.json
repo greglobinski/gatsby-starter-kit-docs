@@ -12,7 +12,7 @@
     "deploy": "rimraf .cache public/ && gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "@react-website-themes/classy-docs": "^0.0.16",
+    "@react-website-themes/classy-docs": "^0.0.19",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.6",
     "facepaint": "^1.2.1",
