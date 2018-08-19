@@ -51,6 +51,7 @@ The **Blog** starter is the most advanced **default** starter in the **Kit**. It
 
 ## Add-ons
 
+- @react-website-themes/default
 - emotion
 - emotion-server
 - facepaint
@@ -59,7 +60,6 @@ The **Blog** starter is the most advanced **default** starter in the **Kit**. It
 - react-facebook
 - react-feather
 - react-helmet
-- react-website-themes
 
 ## Folder structure
 

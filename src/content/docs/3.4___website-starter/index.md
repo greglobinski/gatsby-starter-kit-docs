@@ -43,13 +43,13 @@ The **Website** starter is built upon the [Themed](../themed-starter) but lets y
 
 ## Add-ons
 
+- @react-website-themes/default
 - emotion
 - emotion-server
 - facepaint
 - react-emotion
 - react-feather
 - react-helmet
-- react-website-themes
 
 ## Folder structure
 

@@ -37,7 +37,7 @@ The local React components are displaced by the **outer library's components** w
 
 ## Add-ons
 
-- react-website-themes
+- @react-website-themes/default
 - emotion
 - react-emotion
 - emotion-server
