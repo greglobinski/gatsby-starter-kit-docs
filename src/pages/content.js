@@ -64,7 +64,7 @@ export default ContentPage;
 export const query = graphql`
   query {
     pages: allMarkdownRemark(
-      filter: { fields: { source: { eq: "docs" } } }
+      filter: { fields: { source: { eq: "docs" }, slug: { ne: null } } }
       sort: { fields: [fields___prefix] }
     ) {
       edges {

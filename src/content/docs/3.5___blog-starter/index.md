@@ -75,6 +75,16 @@ root
       │   │   │   └── index.md
       │   │   └── about
       │   │       └── index.md
+      │   ├── posts
+      │   │   ├── 2017-10-01___two-things-are
+      │   │   |   ├── photo.png
+      │   │   │   └── index.md
+      |   |
+      |   |   ...
+      |   |
+      │   │   └── 2017-10-21___like-nonsense
+      │   │       ├── photo.png
+      │   │       └── index.md
       │   └── parts
       │       ├── author.md
       │       ├── copyright.md

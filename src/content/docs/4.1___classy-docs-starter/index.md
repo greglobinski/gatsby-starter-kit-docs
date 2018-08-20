@@ -4,7 +4,9 @@ shortTitle: Classy Docs
 categories: ['themed']
 ---
 
-The **Classy Docs** starter is the first **themed** starter. It's built upon the [Website](../website-starter) starter plus some add-ons.
+The **Classy Docs** starter is the first **themed** starter at _\*\*Gatsby Starter Kit_. It's built upon the [Website](../website-starter) starter plus some add-ons.
+
+Have you noticed already? The Gatsby Starter Kit documentation, the website you are looking at now, is built with it. :star:
 
 ![gatsby-starter-kit-classy-docs](./gatsby-starter-kit-classy-docs.png)
 
@@ -13,7 +15,7 @@ The **Classy Docs** starter is the first **themed** starter. It's built upon the
 ## Features
 
 - A bunch of ready to use **themeable** React components.
-- The **Classy Docs** theme from [react-website-themes](https://github.com/greglobinski/react-website-themes) applied to all components.
+- The **Classy Docs** theme from [@react-website-themes](https://github.com/greglobinski/react-website-themes) applied to all components.
 - Docs pages automatically created from markdown **docs** files.
 - Automaticaly created **Sidebar** navigation.
 - Web pages automatically created from markdown **pages** files.
