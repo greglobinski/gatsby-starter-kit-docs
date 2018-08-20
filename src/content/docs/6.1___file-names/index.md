@@ -4,7 +4,7 @@ shortTitle: Markdown files' names
 categories: ['guides']
 ---
 
-All starters of **Gatsby Starter Kit** use **Markdown** files to store content. The markdown files are gathered in sub-folders of `scr/content/`. Depending on a starter there could be four type sub-folders under `src/content/`:
+All starters of **Gatsby Starter Kit** use **Markdown** files to store content. The markdown files are gathered in sub-folders of `src/content/`. Depending on a starter there could be four type sub-folders under `src/content/`:
 
 ```
 root
@@ -178,7 +178,7 @@ This time pay attention to this fragment with **GraphQL filter**
 allMarkdownRemark(filter: { fields: { slug: { ne: null } } }) {
 ```
 
-We query only for nodes with the `slug` value different than `null`. So, this combined with the fragments described earlier make that web pages are not created for any of **parts** markdown files and **posts** or **pages** named like this `/scr/content/pages/___post-folder-name`.
+We query only for nodes with the `slug` value different than `null`. So, this combined with the fragments described earlier make that web pages are not created for any of **parts** markdown files and **posts** or **pages** named like this `/src/content/pages/___post-folder-name`.
 
 Thus, if you want to create a **draft** post or page, name it's folder with the **separator** at the beginning.
 
