@@ -46,7 +46,7 @@ const IndexPage = props => {
 /* ... */
 ```
 
-All React components are imported not from local folders but from `node_modules/@react-website-themes/default/`.
+All React components are imported not from the local folders but from `node_modules/@react-website-themes/default/`.
 
 Besides the **component** imports there are also two **style** imports.
 
@@ -55,7 +55,7 @@ import '@react-website-themes/default/styles/variables';
 import '@react-website-themes/default/styles/global';
 ```
 
-Both of them are necessary whenever you import any of the components. Firstly, they were inside the `Layout` component, so there were no need to import them manually, but I decided to change that for customization flexibility.
+Both of them are necessary. Whenever you import any of the components. Firstly, the **style** imports were located inside the `Layout` component, so there were no need to import them manually, but I decided to change that, for customization flexibility.
 
 Under development process you can import components like below.
 
@@ -71,13 +71,13 @@ import {
 } from '@react-website-themes/default';
 ```
 
-But do not do that in production code. This way you import the whole **default** theme.
+But do not do that in production code. This way you import the whole **default** theme, not only the listed ones.
 
 ## Styles
 
 All **themes** at `@react-website-themes` use the great **css-in-js** library [emotion](https://github.com/emotion-js/emotion) to manage CSS styles.
 
-Every component has a it's own style in outer `*.js` file. Take a look at the code of the **Layout** component's file.
+Every component has it's own style contained in an outer `*.js` file. Take a look at the code of the **Layout** component's file.
 
 ```javascript
 import PropTypes from 'prop-types';
@@ -105,7 +105,7 @@ Layout.propTypes = {
 export default Layout;
 ```
 
-Pay attention to these three fragments.
+Pay attention to the three fragments.
 
 ```javascript
 /* ... */
@@ -125,9 +125,9 @@ Layout.propTypes = {
 };
 ```
 
-It's a pattern. Every components imports a corresponding style file and assign the return's value to the `themeStyle` prop if its value is `undefined`. Notice also that everything the style import returns is a `string` value, a name of CSS class.
+Every component imports a corresponding style file and assign the returned value to the `themeStyle` prop, if the prop's value is `undefined`. Notice also that everything the style imports return are `string` values, names of generated CSS classes.
 
-How does it happen? It's the `emotion`'s `css` method job. Below is the code of `styles/layout.js` file.
+How does it happen? It's the `emotion`'s `css` method job. Below is the code of the `styles/layout.js` file.
 
 ```javascript
 import { css } from 'emotion';

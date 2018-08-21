@@ -46,7 +46,7 @@ Second, we use the `emotion`'s `injectGlobal` method to add some CSS variables t
 
 ### Customization
 
-You can although do not import the whole file and create your own local one or override just some of the variables. You can also add new ones.
+You can although do not import the `variable` file and create your own local one or override just some of the variables. You can also add new ones.
 
 ```javascript
 import { injectGlobal } from 'emotion';
@@ -68,7 +68,7 @@ injectGlobal`
 
 ## Global styles
 
-Global styles works exactly the same way as described above **variables**. They are separated to the another file only for flexibility.
+Global styles works exactly the same way as the described above **variables**. They are separated to an another file only for flexibility.
 
 ```javascript
 import '@react-website-themes/default/styles/global';
@@ -137,7 +137,7 @@ const global = injectGlobal`
 export default global;
 ```
 
-Do you see the same `emotion`'s `injectGlobal` method? Nothing new here.
+Do you see the same `emotion`'s `injectGlobal` method? Nothing new here, right?
 
 ### Customization.
 
@@ -202,15 +202,15 @@ Every component, except the Seo one, expect two optional **style** props:
 - `themeStyle`
 - `customStyle`
 
-When the `themeStyle` prop is undefined, what is suggested usage, the component assigns to it the built-in style.
+When the `themeStyle` prop is undefined, what is a suggested usage, the component assigns to it the built-in style.
 
 If `customTheme` is undefined, the component assigns to it an empty string.
 
-Both styles `themeStyle` and `customStyle` are merged into one by the `emotion`'s `cx` method.
+Both of the styles `themeStyle` and `customStyle` are merged into one by the `emotion`'s `cx` method.
 
 ### Customization
 
-You can override the built-in styles by providing a `customStyle` property for the component.
+You can override the built-in styles by providing a `customStyle` prop for the component.
 
 ```javascript
 import { css } from 'emotion';
