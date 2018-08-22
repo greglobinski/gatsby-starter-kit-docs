@@ -55,7 +55,7 @@ import '@react-website-themes/default/styles/variables';
 import '@react-website-themes/default/styles/global';
 ```
 
-Both of them are necessary, every time you import any of the components you need to import them two. Firstly, the **style** imports were located inside the `Layout` component, so there were no need to import them manually, but I decided to change that, for customization flexibility.
+Both of them are necessary, every time you import any of the components you need to import them too. Firstly, the **style** imports were located inside the `Layout` component, so there were no need to import them manually, but I decided to change that, for customization flexibility.
 
 Under development process you can import components like below.
 
