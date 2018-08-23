@@ -11,15 +11,15 @@ The **Advanced usage** installation process is much longer and sweaty than the *
 
 ## What's the difference?
 
-With **Advanced usage** you cannot use `gatsby new`. The command installs Gatsby website but does not copy git **repository** to your localhost and there is no **Advanced usage** without the cloned repository.
+With **Advanced usage** you cannot use `gatsby new`. The command installs Gatsby website but does not copy git **repository** to your localhost and there is no **Advanced usage** without the Git repository.
 
-With the cloned git repository you will be able to upgrade your localhost code if I refactor codebase in the `upstream` repo. Sure, sometimes it will not work without resolving **conflicts** but still.
+With a cloned git repository you will be able to upgrade your localhost code if I refactor codebase in the `upstream` repo. Sure, sometimes it will not work without resolving **conflicts** but still.
 
-With **Advanced usage** you will be able launch your site as a **Website** starter and later when the time comes upgrade it to **Blog** by merging the `blog` branch to your `master`.
+With **Advanced usage** you will be able launch your site as a **Website** starter and later, when the time comes, upgrade it to **Blog** by merging the `blog` branch into your `master`.
 
 ## Git clone
 
-Instead of `gatsby new` you will use the `git clone` command.
+Instead of `gatsby new` use the `git clone` command.
 
 But first you have to make your own fork of the Kit's [repository](https://github.com/greglobinski/gatsby-starter-kit).
 
