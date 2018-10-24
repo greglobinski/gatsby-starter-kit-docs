@@ -10,16 +10,16 @@ If you want to configure environment variables for a certain environment, you sh
 
 In your `gatsby-config.js` file, you will probably have the following:
 
-```
-# gatsby-config.js
+```javascript
+// gatsby-config.js
 
 require('dotenv').config();
 ```
 
 To configure environment variables for your environments, change this to the following:
 
-```
-# gatsby-config.js
+```javascript
+// gatsby-config.js
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -28,7 +28,7 @@ require('dotenv').config({
 
 Once this is in place, you will be able to utilize the environment variables in your dotenv file.
 
-```
+```bash
 # Example .env.production file
 
 THIRD_PARTY_APP_ID="1234"
@@ -37,11 +37,11 @@ THIRD_PARTY_APP_ID="1234"
 For a full overview of setting up environment variables, check out the [Gatsby documentation](https://www.gatsbyjs.org/docs/environment-variables/).
 
 ## Setting up Google Analytics
-To setup Google Analytics you'll need a Google Tracking ID. If you don't already have a tracking ID, visit https://analytics.google.com/ to create one.
+To setup Google Analytics you'll need a Google Tracking ID. If you don't already have a tracking ID, visit [analytics.google.com](https://analytics.google.com/) to create one.
 
 Once you have your Google Tracking ID, you can add the following to your dotenv file (recommended):
 
-```
+```bash
 # Example .env.production file
 
 GOOGLE_ANALYTICS_ID="UA-12345678-9"
@@ -49,7 +49,7 @@ GOOGLE_ANALYTICS_ID="UA-12345678-9"
 
 Or you can hardcode it into your `gatsby-config.js` file like so:
 
-```
+```javascript
 ...
 
   {
@@ -62,11 +62,11 @@ Or you can hardcode it into your `gatsby-config.js` file like so:
 ```
 
 ## Setting up Facebook Comments
-To setup Facebook Comments on your posts, you will need a Facebook App ID. If you don't already have a Facebook App, visit https://developers.facebook.com/ to create one.
+To setup Facebook Comments on your posts, you will need a Facebook App ID. If you don't already have a Facebook App, visit [developers.facebook.com](https://developers.facebook.com/) to create one.
 
 Once you have your Facebook App ID, you can add the following to your dotenv file:
 
-```
+```bash
 # Example .env.production file
 
 GATSBY_FACEBOOK_APPID="123456789"
