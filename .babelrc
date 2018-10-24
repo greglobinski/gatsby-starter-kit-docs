@@ -1,6 +1,14 @@
 {
   "presets": [
     [
+      "babel-preset-gatsby",
+      {
+        targets: {
+          browsers: [">0.25%", "not dead"],
+        },
+      },
+    ],
+    [
       "@babel/preset-env",
       {
         "loose": true,
@@ -18,8 +26,7 @@
         "useBuiltIns": true,
         "pragma": "React.createElement"
       }
-    ],
-    "@babel/preset-flow"
+    ]
   ],
   "plugins": [
     [
