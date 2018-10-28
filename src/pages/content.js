@@ -14,9 +14,9 @@ import List from '@react-website-themes/classy-docs/components/List';
 import Menu from '@react-website-themes/classy-docs/components/Menu';
 import Seo from '@react-website-themes/classy-docs/components/Seo';
 
-import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
-import categoryList from 'content/meta/categories';
+import config from '../content/meta/config';
+import menuItems from '../content/meta/menu';
+import categoryList from '../content/meta/categories';
 
 const ContentPage = props => {
   const {

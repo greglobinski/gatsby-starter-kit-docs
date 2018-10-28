@@ -14,8 +14,8 @@ import Layout from '@react-website-themes/classy-docs/components/Layout';
 import Menu from '@react-website-themes/classy-docs/components/Menu';
 import Seo from '@react-website-themes/classy-docs/components/Seo';
 
-import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
+import config from '../content/meta/config';
+import menuItems from '../content/meta/menu';
 
 const NotFoundPage = props => {
   const {

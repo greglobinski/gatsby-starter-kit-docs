@@ -37,7 +37,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    `gatsby-plugin-resolve-src`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

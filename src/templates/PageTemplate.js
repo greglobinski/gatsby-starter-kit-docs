@@ -18,9 +18,9 @@ import Seo from '@react-website-themes/classy-docs/components/Seo';
 import Sidebar from '@react-website-themes/classy-docs/components/Sidebar';
 import layoutSidebar from '@react-website-themes/classy-docs/styles/layoutSidebar';
 
-import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
-import categoryList from 'content/meta/categories';
+import config from '../content/meta/config';
+import menuItems from '../content/meta/menu';
+import categoryList from '../content/meta/categories';
 
 const PageTemplate = props => {
   const {
